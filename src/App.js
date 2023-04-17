@@ -10,7 +10,7 @@ function App() {
       .get(`${process.env.REACT_APP_BACKEND_URL}`)
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
-    console.log(process.env.REACT_APP_BACKEND_URL);
+    console.log("env: ", process.env.REACT_APP_BACKEND_URL);
   }, []);
 
   const getOtra = () => {
