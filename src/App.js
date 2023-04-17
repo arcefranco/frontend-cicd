@@ -5,8 +5,8 @@ import axios from "axios";
 function App() {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios
+  useEffect(async () => {
+    await axios
       .get(process.env.REACT_APP_BACKEND_URL)
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
