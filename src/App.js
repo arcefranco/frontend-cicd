@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}`)
+      .get(process.env.REACT_APP_BACKEND_URL)
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
     console.log("env: ", process.env.REACT_APP_BACKEND_URL);
@@ -15,7 +15,7 @@ function App() {
 
   const getOtra = () => {
     return axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/otra`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}otra`)
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
   };
