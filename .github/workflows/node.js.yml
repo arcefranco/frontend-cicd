@@ -23,14 +23,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
-      - run: npm run build --if-present
+      - run: npm install
+      - run: npm run build
 
   create-env-file:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Create .env file
         run: |
-          echo "API_KEY=your_api_key" >> .env
-          echo "SECRET_KEY=your_secret_key" >> .env
-          echo "REACT_APP_BACKEND_URL=http://127.0.0.1:3001/" >> .env
+          touch .env
+          echo REACT_APP_BACKEND_URL="http://127.0.0.1:3001/" >> .env
