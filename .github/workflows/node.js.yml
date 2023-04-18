@@ -26,4 +26,4 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: touch .env
-      - run: echo "REACT_APP_BACKEND_URL=http://127.0.0.1:3001/" >> .env
+      - run: echo "REACT_APP_BACKEND_URL=http://ec2-54-212-244-254.us-west-2.compute.amazonaws.com:3001/" >> .env

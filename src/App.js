@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://ec2-54-212-244-254.us-west-2.compute.amazonaws.com:3001/")
+      .get(process.env.REACT_APP_BACKEND_URL)
       .then((response) => setData(response.data))
       .catch((error) => console.log("this is error: ", error));
     console.log("env: ", process.env);
