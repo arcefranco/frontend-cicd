@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import * as env from "dotenv";
 function App() {
   const [data, setData] = useState([]);
 
@@ -11,6 +11,7 @@ function App() {
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
     console.log("env: ", process.env);
+    console.log(env);
   }, []);
 
   const getOtra = () => {
