@@ -9,7 +9,7 @@ function App() {
     axios
       .get("http://127.0.0.1:3001/")
       .then((response) => setData(response.data))
-      .catch((error) => console.log(error));
+      .catch((error) => console.log("this is error: ", error));
     console.log("env: ", process.env);
   }, []);
 
