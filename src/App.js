@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-const env = require("dotenv").config();
+require("dotenv").config();
 function App() {
   const [data, setData] = useState([]);
 
