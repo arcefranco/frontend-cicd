@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(process.env.REACT_APP_BACKEND_URL)
+      .get("http://127.0.0.1:3001/")
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
     console.log("env: ", process.env);
