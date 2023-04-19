@@ -11,6 +11,9 @@ jobs:
   build:
     runs-on: self-hosted
 
+    env:
+      REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
+
     strategy:
       matrix:
         node-version: [16.x]
