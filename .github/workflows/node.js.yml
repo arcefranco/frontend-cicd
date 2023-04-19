@@ -12,7 +12,7 @@ jobs:
     runs-on: self-hosted
 
     env:
-      REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
+      REACT_APP_BACKEND_URL: http://ec2-35-91-29-142.us-west-2.compute.amazonaws.com:3001/
 
     strategy:
       matrix:
