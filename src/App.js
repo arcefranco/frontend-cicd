@@ -21,7 +21,7 @@ function App() {
   };
   return (
     <div className="App">
-      <h1>hola frontend!!prubea</h1>
+      <h1>hola frontend!!prueba</h1>
 
       <p>{process.env.REACT_APP_BACKEND_URL}</p>
       <button onClick={getOtra}>Otra</button>
