@@ -23,7 +23,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      - run: export REACT_APP_BACKEND_URL=http://ec2-35-91-29-142.us-west-2.compute.amazonaws.com:3001/
       - run: npm install
       - run: npm run build
-      - run: touch .env
-      - run: echo "REACT_APP_BACKEND_URL=http://ec2-35-91-29-142.us-west-2.compute.amazonaws.com:3001/" >> .env
